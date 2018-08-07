@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0"
+            prefWidth="225.0" styleClass="hoverStyle" stylesheets="/css/styles.css"
+            xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.HoverInfoController">
+   <children>
+      <ImageView fx:id="hoverImage" fitHeight="240.0" fitWidth="177.0" layoutX="24.0" layoutY="73.0"
+                 pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="hoverTitle" layoutX="63.0" layoutY="29.0" prefHeight="18.0" prefWidth="98.0" />
+      <Label fx:id="hoverActors" layoutX="24.0" layoutY="334.0" prefHeight="70.0" prefWidth="178.0" />
+   </children>
+</AnchorPane>

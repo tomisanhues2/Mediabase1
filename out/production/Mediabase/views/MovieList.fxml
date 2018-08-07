@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="/css/styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MovieListController">
+   <center>
+      <SplitPane dividerPositions="0.9" orientation="VERTICAL" BorderPane.alignment="CENTER">
+        <items>
+            <HBox prefHeight="100.0" prefWidth="800.0">
+               <children>
+                  <TableView fx:id="movieTable" prefHeight="400.0" prefWidth="780.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="listTableID" editable="false" maxWidth="52.0" minWidth="43.0" prefWidth="43.0" resizable="false" text="%movieIDString">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="ID" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="listTableTitle" prefWidth="243.0" resizable="false" text="%movieTitleString">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="title" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="listTableYear" prefWidth="94.0" resizable="false" text="%movieYearString">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="year" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="listTableScore" prefWidth="171.0" resizable="false" text="%movieRatingString">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="score" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="listTableMore" prefWidth="212.0" resizable="false" styleClass="clickMoreButton" text="%movieMoreString">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="more" />
+                           </cellValueFactory>
+                       </TableColumn>
+                     </columns>
+                  </TableView>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="800.0" spacing="30.0">
+               <children>
+                  <Label fx:id="listSearchTitle" text="%listSearchTitle" />
+                  <TextField fx:id="listSearchField" prefHeight="26.0" prefWidth="214.0" />
+                  <Button fx:id="addMovieButton" mnemonicParsing="false" onAction="#addMovieButton" prefWidth="150.0" text="%addMovieButton" />
+               </children>
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+            </HBox>
+        </items>
+      </SplitPane>
+   </center>
+   <top>
+      <VBox prefHeight="80.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="menuBarHBox" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="800.0" spacing="40.0" styleClass="toolBar" stylesheets="/css/styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" text="%menuBarListButton" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="220.0" styleClass="toolBarTitle" text="%menuTitleString">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="saveListButton" mnemonicParsing="false" onAction="#saveAndQuitButton" prefHeight="30.0" prefWidth="220.0" text="%menuBarSaveButton">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="configHBox" alignment="CENTER" prefHeight="40.0" prefWidth="800.0" spacing="30.0">
+               <children>
+                  <Label alignment="CENTER" prefWidth="120.0" text="%listNameLabel">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="listNameField" />
+                  <Label alignment="CENTER" prefWidth="120.0" text="%listAuthorLabel">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="listAuthorField" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

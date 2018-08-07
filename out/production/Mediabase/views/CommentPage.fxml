@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CommentPageController">
+   <center>
+      <VBox spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#previousButton" prefHeight="26.0" prefWidth="100.0" text="%previousCommentButton" />
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="150.0" text="%commentsLabel" />
+                  <Button mnemonicParsing="false" onAction="#nextButton" prefHeight="26.0" prefWidth="100.0" text="%nextCommentButton" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="commentText" alignment="TOP_LEFT" prefHeight="102.0" prefWidth="391.0" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="commentField" maxHeight="80.0" prefHeight="80.0" prefWidth="300.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextArea>
+            <Button fx:id="addCommentButton" mnemonicParsing="false" onAction="#addCommentToDB" prefHeight="30.0" prefWidth="80.0" text="%addCommentLabel" />
+         </children>
+      </HBox>
+   </bottom>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</BorderPane>

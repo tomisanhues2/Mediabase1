@@ -1,0 +1,60 @@
+.root {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-weight: bold;
+    -fx-background-color: #FFF;
+}
+
+.button {
+    -fx-background-color: #1abc9c;
+    -fx-text-fill: #fff;
+
+}
+
+.button:hover {
+    -fx-font-family: "Comic Sans MS";
+    -fx-background-color: #1a9172;
+    -fx-text-fill: #fff;
+    -fx-border-color: #000000;
+}
+
+.label {
+    -fx-font-family: sans-serif;
+
+
+}
+
+.invalidInput {
+    -fx-background-color: #000000;
+}
+
+.validInput {
+
+}
+
+.clickMoreButton {
+    -fx-text-fill: #293aff;
+    -fx-underline: true;
+}
+
+.title{
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-weight: bold;
+    -fx-text-fill: #00223d;
+    -fx-background-color: transparent #1a9172 transparent #1a9172;
+}
+
+.hoverStyle{
+    -fx-border-color: #1a9172;
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+}
+
+.toolBar {
+    -fx-background-color: #c8ced5;
+
+}
+
+.toolBarTitle {
+    -fx-font-size: 40px;
+}
+
+
